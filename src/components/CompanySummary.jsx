@@ -5,9 +5,11 @@ import './CompanySummary.scss';
 
 class CompanySummary extends React.Component {
 	render() {
+		const { name, website } = this.props.company;
 		return (
-			<div>
-				Company Summary
+			<div className="company-summary">
+				<h2>{ name }</h2>
+				<a href={website}>Homepage</a>
 			</div>
 		);
 	}

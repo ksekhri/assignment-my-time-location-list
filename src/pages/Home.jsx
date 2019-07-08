@@ -18,7 +18,6 @@ class Home extends React.Component {
 			<App>
 				<CompanySummary />
 				<LocationList />
-				<Link to="/40426">Go to Location 40426</Link>
 			</App>
 		);
 	}
