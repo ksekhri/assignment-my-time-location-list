@@ -2,8 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './Location.scss';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import App from "../components/App";
 
 import companyActions from '../redux/actions/companyAction';
 
@@ -15,18 +14,18 @@ class Location extends React.Component {
 	render() {
 		const { locations } = this.props;
 		return (
-			<div className="App">
-				<Header />
-				<header className="App-header">
-					<button onClick={this.setLocations}>Set Locations</button>
-					Locations{
-						locations.length
-							? `: ${locations.length} Locations Found`
-							: ''
-					}
-				</header>
-				<Footer />
-			</div>
+			<App>
+				<div className="App">
+					<header className="App-header">
+						<button onClick={this.setLocations}>Set Locations</button>
+						Locations{
+							locations.length
+								? `: ${locations.length} Locations Found`
+								: ''
+						}
+					</header>
+				</div>
+			</App>
 		);
 	}
 }
@@ -37,8 +36,6 @@ const mapStateToProps = state => ({
 	locations: state.companyReducer.locations,
 });
 
-const mapDispatchToProps = dispatch => ({
-	fetchLocations: (companyId) => dispatch(companyActions.fetchLocations(companyId)),
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Location);

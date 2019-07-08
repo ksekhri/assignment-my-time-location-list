@@ -1,0 +1,16 @@
+.footer {
+  height: 2rem;
+  background: #28859a;
+  color: #fff;
+
+  .footer-content {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    user-select: none;
+    line-height: 2rem;
+  }
+}
