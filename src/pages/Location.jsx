@@ -5,26 +5,18 @@ import './Location.scss';
 import App from "../widgets/App";
 
 import companyActions from '../redux/actions/companyAction';
+import DealList from "../components/DealList";
 
 class Location extends React.Component {
-	setLocations = () => {
-		this.props.fetchLocations(40426);
-	};
+	componentDidMount() {
+		this.props.fetchDeals(this.props.match.params.locationId);
+	}
 
 	render() {
 		const { locations } = this.props;
 		return (
 			<App>
-				<div className="App">
-					<header className="App-header">
-						<button onClick={this.setLocations}>Set Locations</button>
-						Locations{
-							locations.length
-								? `: ${locations.length} Locations Found`
-								: ''
-						}
-					</header>
-				</div>
+				<DealList />
 			</App>
 		);
 	}
@@ -34,8 +26,11 @@ const mapStateToProps = state => ({
 	...state,
 	company: state.companyReducer.company,
 	locations: state.companyReducer.locations,
+	deals: state.companyReducer.deals,
 });
 
-const mapDispatchToProps = dispatch => ({});
+const mapDispatchToProps = dispatch => ({
+	fetchDeals: (locationId) => dispatch(companyActions.fetchDeals(locationId)),
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Location);

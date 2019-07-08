@@ -17,6 +17,14 @@ const setLocations = (locations) => {
 	};
 };
 
+
+const setDeals = (deals) => {
+	return {
+		type: ActionTypes.SET_DEALS,
+		payload: deals,
+	};
+};
+
 // Public Actions
 
 const fetchCompany = (companyId) => {
@@ -55,7 +63,28 @@ const fetchLocations = (companyId) => {
 	};
 };
 
+
+const fetchDeals = (locationId) => {
+	const companyId = 40426;
+	return dispatch => {
+		fetch(
+			`${baseUrl}${companyId}/deals?location_ids=${locationId}`,
+			{
+				method: 'GET',
+			},
+		)
+			.then(response => response.json())
+			.then(response => {
+				// TODO: Add code to handle request failure
+				const { deals } = response;
+
+				dispatch(setDeals(deals));
+			});
+	};
+};
+
 export default {
 	fetchCompany,
 	fetchLocations,
+	fetchDeals,
 };

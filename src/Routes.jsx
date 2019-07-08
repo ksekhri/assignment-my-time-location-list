@@ -9,7 +9,7 @@ function Routes() {
 	return (
 		<ConnectedRouter history={history}>
 			<Route exact path="/" component={Home} />
-			<Route path="/:companyId" component={Location} />
+			<Route path="/:locationId" component={Location} />
 		</ConnectedRouter>
 	);
 }

@@ -3,6 +3,7 @@ import { ActionTypes } from '../actionTypes/companyActionTypes';
 const initialState = {
 	company: {},
 	locations: [],
+	deals: [],
 };
 
 export default (state = initialState, action) => {
@@ -16,6 +17,11 @@ export default (state = initialState, action) => {
 			return {
 				...state,
 				locations: action.payload,
+			};
+		case ActionTypes.SET_DEALS:
+			return {
+				...state,
+				deals: action.payload,
 			};
 		default:
 			return state;

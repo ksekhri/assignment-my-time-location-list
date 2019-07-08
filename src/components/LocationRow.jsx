@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import './Location.scss';
+import './LocationRow.scss';
 
-class Location extends React.Component {
+class LocationRow extends React.Component {
 	render() {
 		const {
 			street_address,
@@ -42,4 +42,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Location);
+export default connect(mapStateToProps, mapDispatchToProps)(LocationRow);
