@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import './Locations.css';
+import './Location.scss';
 
 import companyActions from '../redux/actions/companyAction';
 
-class Locations extends React.Component {
+class Location extends React.Component {
 	setLocations = () => {
 		this.props.fetchLocations(40426);
 	};
@@ -37,4 +37,4 @@ const mapDispatchToProps = dispatch => ({
 	fetchLocations: (companyId) => dispatch(companyActions.fetchLocations(companyId)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Locations);
+export default connect(mapStateToProps, mapDispatchToProps)(Location);

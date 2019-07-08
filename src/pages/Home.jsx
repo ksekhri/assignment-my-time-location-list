@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import './Home.css';
+import './Home.scss';
 import logo from '../logo.svg';
 
 import companyActions from '../redux/actions/companyAction';
