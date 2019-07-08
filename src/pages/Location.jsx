@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './Location.scss';
+import Header from "../components/Header";
 
 import companyActions from '../redux/actions/companyAction';
 
@@ -14,6 +15,7 @@ class Location extends React.Component {
 		const { locations } = this.props;
 		return (
 			<div className="App">
+				<Header />
 				<header className="App-header">
 					<button onClick={this.setLocations}>Set Locations</button>
 					Locations{

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 import './Home.scss';
+import Header from "../components/Header";
 import logo from '../logo.svg';
 
 import companyActions from '../redux/actions/companyAction';
@@ -16,6 +17,7 @@ class Home extends React.Component {
 		const { company } = this.props;
 		return (
 			<div className="App">
+				<Header/>
 				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<button onClick={this.setCompany}>Set Company</button>
