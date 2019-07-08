@@ -9,7 +9,7 @@ import companyActions from '../redux/actions/companyAction';
 
 class Home extends React.Component {
 	setCompany = () => {
-		this.props.fetchCompany(22093);
+		this.props.fetchCompany(40426);
 	};
 
 	render() {
