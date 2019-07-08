@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import './Location.scss';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import companyActions from '../redux/actions/companyAction';
 
@@ -24,6 +25,7 @@ class Location extends React.Component {
 							: ''
 					}
 				</header>
+				<Footer />
 			</div>
 		);
 	}

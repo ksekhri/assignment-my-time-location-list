@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import './Home.scss';
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import logo from '../logo.svg';
 
 import companyActions from '../redux/actions/companyAction';
@@ -27,6 +28,7 @@ class Home extends React.Component {
 					}
 					<Link to="/40426">Go to Location 40426</Link>
 				</header>
+				<Footer />
 			</div>
 		);
 	}
