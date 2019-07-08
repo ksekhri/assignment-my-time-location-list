@@ -30,6 +30,10 @@ Core:
 
 Additions:
 * [React Router](https://github.com/ReactTraining/react-router)
+* [Redux](https://github.com/reduxjs/redux)
+* [React Redux](https://github.com/reduxjs/react-redux)
+* [Redux Thunk](https://github.com/reduxjs/redux-thunk)
+* [Connected React Router](https://github.com/supasate/connected-react-router)
 
 ## Instructions to Run
 
