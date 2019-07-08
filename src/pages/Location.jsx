@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './Location.scss';
-import App from "../components/App";
+import App from "../widgets/App";
 
 import companyActions from '../redux/actions/companyAction';
 

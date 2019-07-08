@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import './App.scss';
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 
 import companyActions from '../redux/actions/companyAction';
 
@@ -17,9 +17,9 @@ class App extends React.Component {
 		const { children } = this.props;
 
 		return (
-			<div>
+			<div className="app">
 				<Header />
-				<div>{children}</div>
+				<main className="content">{children}</main>
 				<Footer />
 			</div>
 		);

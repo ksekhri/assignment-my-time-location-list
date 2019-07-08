@@ -3,8 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 import './Home.scss';
-import App from "../components/App";
-import logo from '../logo.svg';
+import App from "../widgets/App";
+import CompanySummary from "../components/CompanySummary";
+import LocationList from "../components/LocationList";
 
 import companyActions from '../redux/actions/companyAction';
 
@@ -15,12 +16,9 @@ class Home extends React.Component {
 		const { company } = this.props;
 		return (
 			<App>
-				<div className="App">
-					<header className="App-header">
-						<img src={logo} className="App-logo" alt="logo" />
-						<Link to="/40426">Go to Location 40426</Link>
-					</header>
-				</div>
+				<CompanySummary />
+				<LocationList />
+				<Link to="/40426">Go to Location 40426</Link>
 			</App>
 		);
 	}
