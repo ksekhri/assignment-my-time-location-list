@@ -28,6 +28,9 @@ Assessment criteria:
 Core: 
 * [Create React App](https://github.com/facebook/create-react-app)
 
+Additions:
+* [React Router](https://github.com/ReactTraining/react-router)
+
 ## Instructions to Run
 
 ### `npm start`
